@@ -35,6 +35,10 @@
             .reveal h3 {
                 color: #777;
             }
+            .reveal code {
+                font-size: 1.5em;
+                line-height: 1.2em;
+            }
             .yellow {
                 color: yellow;
             }
@@ -78,22 +82,6 @@
                         <li class="fragment">Last lab: week 10, 8th-12th December</li>
                     </ul>
 				</section>
-				<section>
-                    <h2>Implementation Roadmap</h2>
-                    <ol>
-                        <li class="fragment">Main page: required functionalities</li>
-                        <li class="fragment">Login + Signup + Main page enhancement</li>
-                        <li class="fragment">Other stuff</span></li>
-                    </ol>
-				</section>
-                <section>
-                    <h2>Implementation Roadmap</h2>
-                    <ol>
-                        <li>Main page: required functionalities (<span class="yellow">PHP</span>)</li>
-                        <li>Login + Signup + Main page enhancement (<span class="yellow">PHP</span> + <span class="magenta">MySQL</span>)</li>
-                        <li>Other stuff</li>
-                    </ol>
-                </section>
                 <section>
                     <h2>Implementation Roadmap</h2>
                     <ol>
@@ -121,19 +109,61 @@
                     <h2>Assignment - Week 7</h2>
                     <ul>
                         <li>Learn <a href="http://www.w3schools.com/php/default.asp" target="_blank">PHP5 Tutorial</a></li>
-                        <li>Implement: upload file</li>
-                        <li>Implement: display uploaded folders/files</li>
-                        <li>Implement: create new folder</li>
+                        <li>Upload file</li>
+                        <li>Display uploaded folders/files</li>
+                        <li>Create new folder</li>
                     </ul>
                 </section>
-                <!--<section>
-                    <h2>Main Page - Week 9</h2>
-                    <ul>
+                <section id="lab8">
+                    <h2>Upload File</h2>
+                    <a class="fragment" href="http://www.w3schools.com/php/php_file_upload.asp" target="_blank">http://www.w3schools.com/php/php_file_upload.asp</a>
+                    <pre class="fragment"><code>
+            <form method='post' action='upload.php' enctype='multipart/form-data'>
+                <input type='file' name='filename' size='10'>
+                <input type='submit' value='Upload'>
+            </form>
+                    </code></pre>
+                        <form method='post' action='upload.php' enctype='multipart/form-data' class="fragment">
+                            <input type='file' name='filename' size='10'>
+                            <input type='submit' value='Upload'>
+                        </form>
+                    <pre class="fragment"><code>
+            if ($_FILES) {
+                $name = $_FILES['filename']['name'];
+                move_uploaded_file($_FILES['filename']['tmp_name'], $name);
+            }
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Display Uploaded Folders/Files</h2>
+                    <a class="fragment" href="http://php.net/manual/en/class.directoryiterator.php" target="_blank">http://php.net/manual/en/class.directoryiterator.php</a>
+                    <pre class="fragment"><code>
+                $di = new DirectoryIterator('../moodle');
+                foreach ($di as $fileInfo) {
+                    if ($fileInfo->isDot()) continue;
+                    echo $fileInfo->getFilename() . "<br>\n";
+                }
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Create New Folder</h2>
+                    <a class="fragment" href="http://php.net/manual/en/function.mkdir.php" target="_blank">http://php.net/manual/en/function.mkdir.php</a>
+                    <pre class="fragment"><code>
+                        mkdir("/path/to/my/dir", 0777, true);
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Assignment - Week 8</h2>
+                     <ul>
                         <li>Rename, delete folder/file</li>
                         <li>Navigate through the storage space</li>
                         <li>Operate with sub-folder, delete non-empty folder</li>
                     </ul>
-                </section> -->
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                    </script>
+                </section>
 			</div>
 
 		</div>

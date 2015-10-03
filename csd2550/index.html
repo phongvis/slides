@@ -14,44 +14,22 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../css/reveal.min.css">
-		<link rel="stylesheet" href="../css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/serif.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '../css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
 
         <style>
-            .reveal h3 {
-                color: #777;
-            }
-            .reveal code {
-                font-size: 1.5em;
-                line-height: 1.2em;
-            }
-            .yellow {
-                color: yellow;
-            }
-            .magenta {
-                color: magenta;
-            }
-            .cyan {
-                color: cyan;
-            }
-            .reveal li {
-                font-size: 1.5em;
-                line-height: 1.2em;
-            }
         </style>
 	</head>
 
@@ -61,15 +39,187 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section id="task2">
-					<h1>Course Work - Task 2</h1>
-					<h3>CSD2550 - Web Applications and Databases</h3>
-					<br><br>
-					<p>
-						<a href="mailto:p.nguyen@mdx.ac.uk">Phong Nguyen, 2014</a>
-					</p>
-				</section>
-				<section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## CSD2550 - Web Applications and Databases
+
+                        - [Week 1](#/week1)
+                    </script>
+                </section>
+                <section data-markdown id='week1'>
+                    <script type="text/template">
+                        ## Introduction
+
+                        - Teaching team <!-- .element: class="fragment" -->
+                         - Moduler leader: Ralph Moseley
+                         - Lab tutor: Phong Nguyen
+                         - Lab tutor: Andrei Popescu
+                        - Students <!-- .element: class="fragment" -->
+                         - name, (web) programming experience, expectation
+                        - Module <!-- .element: class="fragment" -->
+                         - HTML/CSS/JavaScript, PHP/SQL, Python
+
+                        <br>
+                        ### Intensive + lots of self-learning hours <!-- .element: class="fragment" -->
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Lab Schedule Week 1 - 6
+
+                        | Week | Topic | Assignment |
+                        | :---:| --- | --- |
+                        | 1 | Introduction | A1: Design dropbox |
+                        | 2 | HTML | Deadline for A1
+                        | 3 | CSS | A2: Make a website |
+                        | 4 | <em>No Lab (catch-up week)</em> | |
+                        | 5 | JavaScript | Deadline for A2 |
+                        | 6 | Putting it all together | |
+                    </script>
+                </section>
+                <!-- <section data-markdown>
+                    <script type="text/template">
+                        ## Schedule of Term 1 (continued)
+
+                        | Week | Topic |
+                        | :---:| --- |
+                        | 7 | PHP 1 |
+                        | 8 | PHP 2 |
+                        | 9 | Database |
+                        | 10 | PHP + Database |
+                        | 11 | Course work discussion |
+                        | 12 | <em>No lab (self working on report)</em> |
+                    </script>
+                </section> -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Materials
+
+                        - **NO** Moodle
+                        - http://tekspace.eu/csd2550/index.php
+                        - Lab slides: http://tinyurl.com/csd2550
+                        - Lab is 1.5 hours
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Module Website
+
+                        - <!-- .element: class="fragment" --> Register an account on http://tekspace.eu/csd2550/index.php
+                        - <!-- .element: class="fragment" --> A tour through the website
+                        - <!-- .element: class="fragment" --> Course work: task and marking scheme
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Lab Assignments
+
+                        - 80% for the final semester report
+                        - 20% for labs
+                         - 4 lab assigments, 5% each (3% if 1 week late)
+                         - Assignments are marked in labs
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Assignment 1: Design Dropbox
+
+                        1. What **features** does your system need to meet?
+                         - *Hint: Read the description of Task 1 & 2 in the module website carefully.*
+                        1. Sketch (paper and pencil) the **interface** and **interaction** of your system to illustrate your system.
+                         - *Hint: How many pages? Where buttons, labels, etc? How to navigate between pages?*
+                        <br><br>
+                        **What to submit:** a list of features and design sketches
+                        <br>
+                        **When & Where**: week 2 in lab
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Code Academy
+
+                        - <!-- .element: class="fragment" -->Register an account on https://www.codecademy.com
+                         - Always sign-in with your account to keep track your progress
+                        - <!-- .element: class="fragment" -->Your first exercise: HTML Basics
+                         - Goto https://www.codecademy.com/en/tracks/web, but **DON'T** click 'START'
+                         - Choose **HTML Basics**, or simply click this [link](https://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1?curriculum_id=50579fb998b470000202dc8b)
+                    </script>
+                </section>
+                <!-- <section data-markdown id='week2'>
+                    <script type="text/template">
+                        ## CSD2550 - Web Applications and Databases
+                        ### Week 2
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Code Academy: HTML
+
+                        - Goto https://www.codecademy.com/en/tracks/web, but **DON'T** click 'START'
+                        - Scroll down to complete these exercises:
+                         - HTML Basics (if not finished last time)
+                         - HTML Basics II
+                         - HTML Basics III
+                    </script>
+                </section>
+                <section data-markdown id='week3'>
+                    <script type="text/template">
+                        ## CSD2550 - Web Applications and Databases
+                        ### Week 3
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Code Academy: CSS
+
+                        - Goto https://www.codecademy.com/en/tracks/web, but **DON'T** click 'START'
+                        - Scroll down to complete these exercises:
+                         - CSS: An Overview
+                         - CSS Selectors
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Assignment 2: Make a Website (Code Academy)
+
+                        - Complete Unit 1-4 in https://www.codecademy.com/en/skills/make-a-website
+                        - Unit 5 is optional with 2% extra mark
+                        <br><br>
+                        **What to submit:** nothing. Lab tutor will check your CodeAcademy account.
+                        <br>
+                        **When & Where**: week 5 in lab
+                    </script>
+                </section><section data-markdown id='week4'>
+                    <script type="text/template">
+                        ## CSD2550 - Web Applications and Databases
+                        ### Week 4: NO lab - work on assignment 2
+                    </script>
+                </section>
+                <section data-markdown id='week5'>
+                    <script type="text/template">
+                        ## CSD2550 - Web Applications and Databases
+                        ### Week 5
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Code Academy: JavaScript
+
+                        - Goto https://www.codecademy.com/en/tracks/javascript, but **DON'T** click 'START'
+                        - Scroll down to do these exercises:
+                         - Getting Started with Programming
+                         - More on Control Flow in JS
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## W3Schools: JavaScript for the Web
+
+                        - Goto http://www.w3schools.com/js/js_examples.asp
+                        - Do exercises under "What can JavaScript do?"
+                    </script>
+                </section> -->
+                <!-- <section>
 					<h2>Feedback for lectures, labs, coursework</h2>
 				</section>
 				<section>
@@ -163,13 +313,13 @@
                 <section data-markdown>
                     <script type="text/template">
                     </script>
-                </section>
+                </section> -->
 			</div>
 
 		</div>
 
 		<script src="../lib/js/head.min.js"></script>
-		<script src="../js/reveal.min.js"></script>
+		<script src="../js/reveal.js"></script>
 
 		<script>
 
